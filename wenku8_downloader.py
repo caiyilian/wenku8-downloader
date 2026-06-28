@@ -26,6 +26,11 @@ import json
 from urllib.parse import urlparse, unquote
 from bs4 import BeautifulSoup
 
+# Windows GBK terminal fix
+if sys.platform == 'win32' and hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 urllib3.disable_warnings()
 
 # ============================================================

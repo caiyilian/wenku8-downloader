@@ -22,6 +22,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Tool config
+.omo/
+
 # Test files (except the main script)
 test_*.py
 bing_response.html
